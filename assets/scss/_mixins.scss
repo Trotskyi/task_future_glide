@@ -1,0 +1,25 @@
+// mixin
+
+
+@mixin roboto_style_400 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+};
+
+@mixin roboto_style_700 {
+  @include roboto_style_400;
+  font-weight: 700;
+}
+
+@mixin viga_style_400 {
+  font-family: 'Viga';
+  font-style: normal;
+  font-weight: 400;
+};
+
+@mixin pad_position{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+

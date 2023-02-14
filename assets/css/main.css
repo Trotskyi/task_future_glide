@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  overflow: hidden;
+  line-height: 1.6;
+  min-width: 320px;
+}
+
+.banner__wrapper {
+  position: relative;
+  z-index: 2;
+}
+.banner__inner {
+  padding-top: 347px;
+  padding-right: 0.75rem;
+  padding-left: 1.75rem;
+  min-height: 100vh;
+  width: 303.85px;
+}
+.banner__inner .field--name-field-head {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.banner__inner .field--name-field-bottom {
+  font-family: "Viga";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.75rem;
+  letter-spacing: 1px;
+}
+.banner__inner h2, .banner__inner h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.field--name-field-description {
+  margin-top: 65px;
+}
+.field--name-field-description p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 1.6;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.paragraph--type--banner-slide {
+  position: relative;
+  color: #FFFFFF;
+}
+.paragraph--type--banner-slide:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  z-index: -100;
+  background-color: rgba(0, 0, 0, 0.21);
+}
+
+.field--name-field-link {
+  margin-top: 39px;
+}
+.field--name-field-link a {
+  text-decoration: none;
+  position: relative;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding-left: 20px;
+  color: #FFFFFF;
+}
+.field--name-field-link a:hover:after {
+  display: block;
+}
+.field--name-field-link a:after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 6px;
+  aspect-ratio: 1/1;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+  transition: display 0.6s ease-in;
+}
+.field--name-field-link a:hover:before {
+  width: calc(100% - 23px);
+}
+.field--name-field-link a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 23px;
+  width: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #FFFFFF;
+  transition: width 0.6s ease-in;
+}
+
+.field--name-field-img picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.field--name-field-img picture .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item_active {
+  opacity: 0.5;
+  color: #FFFFFF;
+  width: 21px;
+  transition: opacity 0.4s ease-in;
+}
+.item_active:hover {
+  opacity: 1;
+  width: 21px;
+}
+.item_active:active {
+  opacity: 0.6;
+  width: 21px;
+}
+
+.banner-slider__controls {
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  width: 100vw;
+  color: #FFFFFF;
+}
+
+.banner-slider__controls-inner {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 90vw;
+  padding: 0 16px;
+}
+
+.banner-slider__controls-item {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.8em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media print, screen and (min-width: 48em) {
+  .banner__wrapper {
+    margin-right: auto;
+    margin-left: 103px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .item_active {
+    width: 42px;
+  }
+  .item_active:hover {
+    width: 42px;
+  }
+  .item_active:active {
+    width: 42px;
+  }
+  .img {
+    object-fit: none !important;
+  }
+  .banner__inner {
+    width: 515px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .paragraph--type--banner-slide .field--name-field-head {
+    font-size: 2rem;
+  }
+  .paragraph--type--banner-slide .field--name-field-bottom {
+    font-size: 7.5rem;
+    line-height: 1;
+  }
+  .paragraph--type--banner-slide .field--name-field-description p {
+    font-size: 1.25rem;
+  }
+  .paragraph--type--banner-slide .field--name-field-link a {
+    font-size: 1.5rem;
+  }
+  .paragraph--type--banner-slide .field--name-field-link a:after {
+    width: 10px;
+    left: 0;
+  }
+  .banner-slider__controls-inner {
+    margin: 0 103px;
+    min-width: 0;
+  }
+}
+@media print, screen and (max-width: 62em) {
+  .banner__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .banner-slider__controls {
+    overflow: hidden;
+  }
+}
